@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:minicrm/screen/dashboard/dashboard_screen_model.dart';
+import 'package:minicrm/helper/rounded_button.dart';
+import 'package:minicrm/helper/database_helper.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -11,12 +13,17 @@ class _DashboardScreenState extends DashboardScreenModel {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: new AppBar(title: new Text("Dashboard"),),
+      appBar: new AppBar(
+        title: new Text("Dashboard"),
+      ),
       drawer: new Drawer(
         child: new ListView(
           children: [
             new ListTile(
-              title: Text("Marketing", style: TextStyle(color: Colors.black45),),
+              title: Text(
+                "Marketing",
+                style: TextStyle(color: Colors.black45),
+              ),
             ),
             new ListTile(
               title: Text("Berita"),
@@ -27,7 +34,10 @@ class _DashboardScreenState extends DashboardScreenModel {
               leading: new Icon(Icons.local_activity),
             ),
             new ListTile(
-              title: Text("Performance", style: TextStyle(color: Colors.black45),),
+              title: Text(
+                "Performance",
+                style: TextStyle(color: Colors.black45),
+              ),
             ),
             new ListTile(
               title: Text("Beranda"),
@@ -42,7 +52,6 @@ class _DashboardScreenState extends DashboardScreenModel {
               leading: new Icon(Icons.people),
             ),
             new ListTile(
-
               title: Text("Riwayat Survey"),
               leading: new Icon(Icons.history),
             ),
@@ -77,6 +86,18 @@ class _DashboardScreenState extends DashboardScreenModel {
                   "assets/images/login_bottom.png",
                   width: size.width * 0.4,
                 )),
+            // RoundedButton(
+            //   text: 'Download Data',
+            //   press: () {
+            //     pressDownload();
+            //   },
+            // ),
+            RoundedButton(
+              text: 'Check Database',
+              press: () {
+                pressCheckData();
+              },
+            )
           ],
         ),
       ),
