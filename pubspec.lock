@@ -76,6 +76,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_statusbarcolor:
+    dependency: "direct main"
+    description:
+      name: flutter_statusbarcolor
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.3"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -184,6 +191,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.4"
+  pin_code_text_field:
+    dependency: "direct main"
+    description:
+      name: pin_code_text_field
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.7.1"
   platform:
     dependency: transitive
     description:

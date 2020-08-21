@@ -26,6 +26,8 @@ dependencies:
   flutter_svg: ^0.18.0
   shared_preferences: ^0.5.8
   package_info: ^0.4.1
+  flutter_statusbarcolor: ^0.2.3
+  pin_code_text_field: ^1.7.1
   http: ^0.12.2
 
 dev_dependencies:
