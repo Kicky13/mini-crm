@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:minicrm/app/my_router.dart';
 import 'package:minicrm/screen/dashboard/dashboard_screen_model.dart';
+import 'package:minicrm/screen/visit_schedule/visit_schedule_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -36,6 +38,9 @@ class _DashboardScreenState extends DashboardScreenModel {
             new ListTile(
               title: Text("Jadwal Kunjungan"),
               leading: new Icon(Icons.assignment),
+              onTap: (){
+                Navigator.pushNamed(context, VisitSchedule);
+              },
             ),
             new ListTile(
               title: Text("Pelanggan"),
@@ -49,6 +54,9 @@ class _DashboardScreenState extends DashboardScreenModel {
             new ListTile(
               title: Text("Statistik Kunjungan"),
               leading: new Icon(Icons.equalizer),
+              onTap: (){
+                Navigator.pushNamed(context, Statistic);
+              },
             ),
             new ListTile(
               title: Text("Survey Kumulatif"),
