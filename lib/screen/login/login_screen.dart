@@ -41,7 +41,7 @@ class _LoginScreenState extends LoginScreenModel {
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: <Widget>[
                     Text(
                       "LOGIN",
                       style: TextStyle(
@@ -62,16 +62,23 @@ class _LoginScreenState extends LoginScreenModel {
                     RoundedTextField(
                       hintText: "Your Email",
                       icon: Icons.person,
-                      onChanged: (value) {},
+                      onChanged: (value) => setUsername(value),
                       isIconVisibility: false,
                     ),
                     RoundedTextField(
                       hintText: "Password",
                       icon: Icons.lock,
-                      onChanged: (value) {},
+                      onChanged: (value) => setPassword(value),
                       isIconVisibility: true,
                       isPass: isShow,
                       press: () => setShow(),
+                    ),
+                    Text(
+                      message,
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     RoundedButton(
                       text: "LOGIN",
