@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:minicrm/screen/dashboard/dashboard_screen_model.dart';
+import 'package:minicrm/screen/sync/sync_screen_model.dart';
+import 'package:minicrm/helper/rounded_button.dart';
 
-class DashboardScreen extends StatefulWidget {
+class SyncScreen extends StatefulWidget {
   @override
-  _DashboardScreenState createState() => _DashboardScreenState();
+  _SyncScreenState createState() => _SyncScreenState();
 }
 
-class _DashboardScreenState extends DashboardScreenModel {
+class _SyncScreenState extends SyncScreenModel {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -84,6 +85,24 @@ class _DashboardScreenState extends DashboardScreenModel {
                   "assets/images/login_bottom.png",
                   width: size.width * 0.4,
                 )),
+            Container(
+              child: Column(
+                children: [
+                  RoundedButton(
+                    text: 'Download Data',
+                    press: () {
+                      pressDownload();
+                    },
+                  ),
+                  RoundedButton(
+                    text: 'Check Database',
+                    press: () {
+                      pressCheckData();
+                    },
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

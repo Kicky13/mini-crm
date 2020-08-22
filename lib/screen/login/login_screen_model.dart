@@ -24,11 +24,11 @@ abstract class LoginScreenModel extends State<LoginScreen> {
     super.initState();
   }
 
-  prosesLogin(){
-    Navigator.pushReplacementNamed(context, Dashboard);
+  prosesLogin() {
+    Navigator.pushReplacementNamed(context, Sync);
   }
 
-  toForgotPassword(){
+  toForgotPassword() {
     Navigator.pushNamed(context, ForgotPass);
   }
 }
