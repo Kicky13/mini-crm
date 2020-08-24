@@ -44,28 +44,7 @@ const customerInitiates = [
       isDelete INTEGER,
       isLocal INTEGER,
       isProgress INTEGER
-    )''',
-  '''CREATE TABLE IF NOT EXISTS customerLocation (
-    idCustomerLocation INTEGER PRIMARY KEY AUTOINCREMENT,
-    idCustomer INTEGER,
-    latitude TEXT,
-    longitude TEXT,
-    needSync INTEGER,
-    isDelete INTEGER,
-    isLocal INTEGER,
-    isProgress INTEGER
-  )''',
-  '''CREATE TABLE IF NOT EXISTS customerNotVisited (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    idKunjungan INTEGER,
-    namaDetail TEXT,
-    noMrDetail INTEGER,
-    deskripsi TEXT,
-    needSync INTEGER,
-    isDelete INTEGER,
-    isLocal INTEGER,
-    isProgress INTEGER
-  )'''
+    )'''
 ];
 
 class CustomerDB {
