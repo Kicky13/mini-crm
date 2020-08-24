@@ -62,7 +62,7 @@ abstract class LoginScreenModel extends State<LoginScreen> {
       /**
        * Contoh Navigasi ke screen lain
        */
-      Navigator.pushReplacementNamed(context, Dashboard);
+      Navigator.pushReplacementNamed(context, NavBar);
     } else {
       setState(() {
         message = res['message'].toString();
