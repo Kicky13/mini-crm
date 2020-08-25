@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
     var isLogin = token != null && token.isNotEmpty;
     print('forcatoken $token');
     Future.delayed(Duration(seconds: MyDimen.timerSplash), () {
-      Navigator.pushReplacementNamed(context, isLogin ? Dashboard : Login);
+      Navigator.pushReplacementNamed(context, isLogin ? NavBar : Login);
     });
   }
 

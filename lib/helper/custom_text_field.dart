@@ -55,7 +55,7 @@ class CustomTextField extends StatelessWidget {
             borderSide: BorderSide(color: MyColor.TextLoginInputUnderlineColor),
           ),
           contentPadding: new EdgeInsets.only( top:7),
-          prefixIcon: isLeftIconVisibility ? Icon(icon, color: MyColor.black) : null,
+          prefixIcon: isLeftIconVisibility ? Icon(icon, color: Colors.black) : null,
         ),
       ),
     );
