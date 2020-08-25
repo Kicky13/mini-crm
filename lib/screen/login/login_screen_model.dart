@@ -45,10 +45,6 @@ abstract class LoginScreenModel extends State<LoginScreen> {
     super.initState();
   }
 
-<<<<<<< HEAD
-  prosesLogin() {
-    Navigator.pushReplacementNamed(context, Sync);
-=======
   prosesLogin() async {
     /**
      * Contoh konesi ke API
@@ -72,7 +68,6 @@ abstract class LoginScreenModel extends State<LoginScreen> {
         message = res['message'].toString();
       });
     }
->>>>>>> 46fbbda0a36252e58f49aa4ce30310a7427da652
   }
 
   toForgotPassword() {

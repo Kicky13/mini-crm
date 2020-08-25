@@ -5,10 +5,27 @@ import 'package:http/http.dart' as http;
 import 'package:minicrm/api/api_config.dart';
 import 'package:minicrm/helper/database_helper.dart';
 
-abstract class SyncScreenModel extends State<SyncScreen> {
+abstract class SyncScreenModel extends State<SyncScreen>
+    with SingleTickerProviderStateMixin {
+  List<Tab> tabList = <Tab>[];
+  TabController tabController;
+
   @override
   void initState() {
     super.initState();
+    tabList.add(Tab(
+      text: 'Sync',
+    ));
+    tabList.add(Tab(
+      text: 'Download',
+    ));
+    tabController = TabController(vsync: this, length: tabList.length);
+  }
+
+  @override
+  void dispose() {
+    tabController.dispose();
+    super.dispose();
   }
 
   pressCheckData() async {

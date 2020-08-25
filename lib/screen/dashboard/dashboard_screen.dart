@@ -21,34 +21,6 @@ class _DashboardScreenState extends DashboardScreenModel {
   Widget build(BuildContext context) {
     final double statusBarHeight = MediaQuery.of(context).padding.top;
     Size size = MediaQuery.of(context).size;
-<<<<<<< HEAD
-    return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Dashboard"),
-      ),
-      drawer: new Drawer(
-        child: new ListView(
-          children: [
-            new ListTile(
-              title: Text(
-                "Marketing",
-                style: TextStyle(color: Colors.black45),
-              ),
-            ),
-            new ListTile(
-              title: Text("Berita"),
-              leading: new Icon(Icons.description),
-            ),
-            new ListTile(
-              title: Text("Program Harian"),
-              leading: new Icon(Icons.local_activity),
-            ),
-            new ListTile(
-              title: Text(
-                "Performance",
-                style: TextStyle(color: Colors.black45),
-              ),
-=======
 
     var _appbar = Container(
       padding: EdgeInsets.only(left: 15, right: 15, top: statusBarHeight),
@@ -78,7 +50,6 @@ class _DashboardScreenState extends DashboardScreenModel {
                   ),
                 )
               ],
->>>>>>> 46fbbda0a36252e58f49aa4ce30310a7427da652
             ),
           ),
         ],
@@ -104,7 +75,7 @@ class _DashboardScreenState extends DashboardScreenModel {
                   ),
                   Colors.white30,
                   7,
-                  (){},
+                  () {},
                   isUseIcon: true,
                 ),
                 Text(
@@ -125,14 +96,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                     "2", "1", Colors.green),
               ],
             ),
-<<<<<<< HEAD
-            new ListTile(
-              title: Text("Riwayat Survey"),
-              leading: new Icon(Icons.history),
-=======
             SizedBox(
               height: 15,
->>>>>>> 46fbbda0a36252e58f49aa4ce30310a7427da652
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -568,8 +533,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                   ),
                   _iconMenu,
                   Container(
-                    padding:
-                        EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 5),
+                    padding: EdgeInsets.only(
+                        left: 15, right: 15, top: 15, bottom: 5),
                     width: double.infinity,
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,

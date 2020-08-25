@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:minicrm/screen/dashboard/dashboard_screen.dart';
 import 'package:minicrm/screen/profile/profile_screen.dart';
 import 'package:minicrm/screen/riwayat/riwayat_screen.dart';
-//import 'package:minicrm/screen/sync/sync_screen.dart';
+import 'package:minicrm/screen/sync/sync_screen.dart';
 import 'package:minicrm/util/resource/my_color.dart';
 
 class NavigationBar extends StatefulWidget {
@@ -15,7 +15,7 @@ class _NavigationBarState extends State<NavigationBar> {
   int selectedIndex = 0;
   static const List<Widget> _screens = <Widget>[
     DashboardScreen(),
-//    SyncScreen(),
+    SyncScreen(),
     RiwayatScreen(),
     ProfileScreen()
   ];
@@ -52,10 +52,10 @@ class _NavigationBarState extends State<NavigationBar> {
             iconData: Icons.home,
             label: 'Beranda',
           ),
-//          FFNavigationBarItem(
-//            iconData: Icons.sync,
-//            label: 'Sync',
-//          ),
+          FFNavigationBarItem(
+            iconData: Icons.sync,
+            label: 'Sync',
+          ),
           FFNavigationBarItem(
             iconData: Icons.history,
             label: 'Riwayat',

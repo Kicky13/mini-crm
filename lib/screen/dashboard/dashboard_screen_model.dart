@@ -1,8 +1,4 @@
 import 'dart:convert';
-<<<<<<< HEAD
-=======
-
->>>>>>> 46fbbda0a36252e58f49aa4ce30310a7427da652
 import 'package:flutter/material.dart';
 import 'package:minicrm/api/api_config.dart';
 import 'package:minicrm/app/my_router.dart';
@@ -35,7 +31,9 @@ abstract class DashboardScreenModel extends State<DashboardScreen> {
       panah == Icons.keyboard_arrow_down
           ? panah = Icons.keyboard_arrow_up
           : panah = Icons.keyboard_arrow_down;
-      ketNaikTurun == "Selengkapnya" ? ketNaikTurun = "Kecilkan" : ketNaikTurun = "Selengkapnya";
+      ketNaikTurun == "Selengkapnya"
+          ? ketNaikTurun = "Kecilkan"
+          : ketNaikTurun = "Selengkapnya";
     });
   }
 
@@ -47,7 +45,7 @@ abstract class DashboardScreenModel extends State<DashboardScreen> {
 
   penilaianSales() {}
 
-  goToUltah(){
+  goToUltah() {
     Navigator.pushNamed(context, UlTah);
   }
 

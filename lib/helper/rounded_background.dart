@@ -9,7 +9,8 @@ class RoundedBackground extends StatelessWidget {
   double padding;
   final Function press;
 
-  RoundedBackground(this.widget, this.warna, this.padding, this.press, {this.isUseIcon = false});
+  RoundedBackground(this.widget, this.warna, this.padding, this.press,
+      {this.isUseIcon = false});
 
   Widget build(BuildContext context) {
     return GestureDetector(

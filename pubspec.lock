@@ -218,11 +218,7 @@ packages:
       name: path_provider_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "1.0.2"
-=======
     version: "1.0.3"
->>>>>>> 46fbbda0a36252e58f49aa4ce30310a7427da652
   pedantic:
     dependency: transitive
     description:
