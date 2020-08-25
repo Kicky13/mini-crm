@@ -29,6 +29,8 @@ dependencies:
   dropdown_date_picker: ^0.0.3
   flutter_svg: ^0.18.0
   package_info: ^0.4.1
+  flutter_statusbarcolor: ^0.2.3
+  pin_code_text_field: ^1.7.1
   shared_preferences: ^0.5.8
   ff_navigation_bar: ^0.1.5
 
