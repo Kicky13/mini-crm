@@ -11,13 +11,39 @@ import 'package:http/http.dart' as http;
 
 abstract class LoginScreenModel extends State<LoginScreen> {
   bool isShow = true;
+  bool isShowFormLogin = true;
+  bool isShowFormPNumber = false;
+  bool isShowFormOTPCode = false;
+  String phoneNumber = "";
   String versionName = "";
   String username = "";
   String password = "";
   String message = "";
 
+
   setShow() {
     isShow = !isShow;
+    if (context != null) setState(() {});
+  }
+
+  setShowFormLogin() {
+    isShowFormPNumber = false;
+    isShowFormOTPCode = false;
+    isShowFormLogin = true;
+    if (context != null) setState(() {});
+  }
+
+  setShowFormPNumber() {
+    isShowFormPNumber = true;
+    isShowFormOTPCode = false;
+    isShowFormLogin = false;
+    if (context != null) setState(() {});
+  }
+
+  setShowFormOTPCode() {
+    isShowFormPNumber = false;
+    isShowFormOTPCode = true;
+    isShowFormLogin = false;
     if (context != null) setState(() {});
   }
 
@@ -30,6 +56,12 @@ abstract class LoginScreenModel extends State<LoginScreen> {
   setPassword(String value) {
     setState(() {
       password = value;
+    });
+  }
+
+  setPhoneNumber(String value) {
+    setState(() {
+      phoneNumber = value;
     });
   }
 
@@ -52,17 +84,19 @@ abstract class LoginScreenModel extends State<LoginScreen> {
     var response = await http.post(APIConfig.login,
         headers: {}, body: {"username": username, "password": password});
     Map res = jsonDecode(response.body);
+    print(res);
     if (res['status'].toString() == 'success') {
       /**
        * Start Contoh get data dari API dan di Save di Shared Priference
        */
-      MLogin mlogin = MLogin.fromJson(res);
-      String token = mlogin.data.token;
-      MyPref.setForcaToken(token);
+//      MLogin mlogin = MLogin.fromJson(res);
+//      String token = mlogin.data.token;
+
+//      MyPref.setForcaToken(token);
       /**
        * Contoh Navigasi ke screen lain
        */
-      Navigator.pushReplacementNamed(context, Dashboard);
+      Navigator.pushReplacementNamed(context, NavBar);
     } else {
       setState(() {
         message = res['message'].toString();
@@ -70,7 +104,11 @@ abstract class LoginScreenModel extends State<LoginScreen> {
     }
   }
 
-  toForgotPassword() {
+  toForgotPassword(){
     Navigator.pushNamed(context, ForgotPass);
+  }
+
+  prosesLogout(){
+    Navigator.pushReplacementNamed(context, Login);
   }
 }
