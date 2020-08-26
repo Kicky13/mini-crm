@@ -52,7 +52,6 @@ class _StatisticScreenState extends StatisticScreenModel {
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            height: 200,
             width: double.infinity,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -61,23 +60,78 @@ class _StatisticScreenState extends StatisticScreenModel {
                 Container(
                     padding: EdgeInsets.symmetric(vertical: 5),
                     width: double.infinity,
-                    color: Colors.blue,
+                    color: Color(0xFFF4343C),
                     child: Text(
-                      "Total Kunjungan",
+                      "Kunjungan Customer",
                       style: TextStyle(color: Colors.white, fontSize: 16),
                       textAlign: TextAlign.center,
                     )),
-                Expanded(
-                    child: Center(
-                        child: Text(
-                  "97",
-                  style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
-                )))
+                Container(
+                  padding: EdgeInsets.all(10),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 100,
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                    top: 8,
+                                    child: Icon(
+                                      Icons.arrow_drop_up,
+                                      size: 60,
+                                      color: Colors.green,
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 45,
+                                    child: Text(
+                                      "100%",
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.green),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Text(
+                              "97",
+                              style: TextStyle(
+                                  fontSize: 50, fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Target:",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "1000",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: Colors.blue, width: 1)),
+                border: Border.all(color: Color(0xFFF4343C), width: 1)),
           ),
         ],
       )),

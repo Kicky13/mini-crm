@@ -36,6 +36,7 @@ class _VisitScheduleScreenState extends VisitScheduleScreenModel {
                   fontWeight: FontWeight.bold),
               iconColor: Colors.blue[700],
               todayButtonColor: Colors.blue[300],
+              selectedDayButtonColor: Color(0xFFF4343C),
               height: 410.0,
               selectedDateTime: currentDate,
             ),
