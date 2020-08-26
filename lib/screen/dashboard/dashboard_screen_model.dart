@@ -37,9 +37,13 @@ abstract class DashboardScreenModel extends State<DashboardScreen> {
     });
   }
 
-  jadwalKunjungan() {}
+  jadwalKunjungan() {
+    Navigator.pushNamed(context, VisitSchedule);
+  }
 
-  statistikKunjungan() {}
+  statistikKunjungan() {
+    Navigator.pushNamed(context, Statistic);
+  }
 
   pelanggan() {}
 
