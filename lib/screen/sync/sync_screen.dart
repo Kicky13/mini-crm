@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:minicrm/screen/sync/sync_screen_model.dart';
-import 'package:minicrm/helper/header.dart';
-import 'package:minicrm/util/resource/my_color.dart';
 
 class SyncScreen extends StatefulWidget {
   const SyncScreen({Key key}) : super(key: key);
@@ -13,36 +11,7 @@ class SyncScreen extends StatefulWidget {
 class _SyncScreenState extends SyncScreenModel {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Header(
-        "Sync & Download",
-        Container(
-            child: Column(
-          children: [
-            Container(
-              child: TabBar(
-                tabs: tabList,
-                controller: tabController,
-                indicatorColor: MyColor.warnaTema,
-                indicatorSize: TabBarIndicatorSize.tab,
-              ),
-            ),
-            Container(
-              child: TabBarView(
-                controller: tabController,
-                children: tabList.map((Tab tab) {
-                  _getIntoPage(tab);
-                }).toList(),
-              ),
-            )
-          ],
-        )),
-        isIconBirth: true,
-        birthCount: 5,
-        isBack: false,
-      ),
-    );
+    return Container(height: 300, child: Text("Halaman Sync"));
   }
 
   Widget _getIntoPage(Tab tab) {
