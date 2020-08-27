@@ -42,13 +42,13 @@ class MyPref {
 
   //action
   static logout() {
-    setForcaToken(null);
+    setCRMToken(null);
   }
 
   //get value
-  static String getForcaToken() => getString(MyString.KEY_TOKEN);
+  static String getCRMToken() => getString(MyString.KEY_TOKEN);
 
-  static setForcaToken(String value) {
+  static setCRMToken(String value) {
     setString(MyString.KEY_TOKEN, value);
   }
 

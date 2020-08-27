@@ -89,15 +89,23 @@ class Header extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: MyColor.warnaTema,
                     borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(45),
-                      bottomLeft: Radius.circular(45),
+                      bottomRight: Radius.circular(40),
+                      bottomLeft: Radius.circular(40),
                     )),
                 child: Container(
-                  padding: EdgeInsets.only(
-                      left: 15, right: 15, top: appbarSize, bottom: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [if (widget != null) widget],
+                  padding:
+                      EdgeInsets.only(left: 15, right: 15, top: appbarSize),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [if (widget != null) widget],
+                      ),
+                      if (widget != null)
+                        SizedBox(
+                          height: 10,
+                        ),
+                    ],
                   ),
                 ),
               ),

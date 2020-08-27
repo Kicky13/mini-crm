@@ -17,7 +17,7 @@ class _NavigationBarState extends State<NavigationBar> {
   int selectedIndex = 0;
   static const List<Widget> _screens = <Widget>[
     DashboardScreen(),
-    CustomeTabBar("Sync & Download", ["Informasi", "Profil", "Lokasi"], [SyncScreen(), DownloadScreen(), SyncScreen()]),
+    CustomeTabBar("Sync & Download", ["Sync", "Download"], [SyncScreen(), DownloadScreen()]),
     RiwayatScreen(),
     ProfileScreen()
   ];
