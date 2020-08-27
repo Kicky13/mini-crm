@@ -89,10 +89,11 @@ abstract class LoginScreenModel extends State<LoginScreen> {
       /**
        * Start Contoh get data dari API dan di Save di Shared Priference
        */
-//      MLogin mlogin = MLogin.fromJson(res);
-//      String token = mlogin.data.token;
+      MLogin mlogin = MLogin.fromJson(res);
+      String token = mlogin.data.token;
+      print(mlogin);
 
-//      MyPref.setForcaToken(token);
+      MyPref.setCRMToken(token);
       /**
        * Contoh Navigasi ke screen lain
        */

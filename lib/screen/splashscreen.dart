@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     versionName = version.version;
     setState(() {});
     await MyPref.init();
-    var token = MyPref.getForcaToken();
+    var token = MyPref.getCRMToken();
     var isLogin = token != null && token.isNotEmpty;
     print('forcatoken $token');
     Future.delayed(Duration(seconds: MyDimen.timerSplash), () {
