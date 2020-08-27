@@ -37,15 +37,15 @@ class Header extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                   child: Icon(
-                    Icons.arrow_back_ios,
+                    Icons.arrow_back,
                     color: MyColor.warnaKonten,
                   ),
                 ),
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 25),
                 child: Text(
                   title,
-                  style: textStyle.copyWith(fontSize: 28),
+                  style: textStyleAppbar,
                 ),
               ),
             ],
@@ -94,7 +94,7 @@ class Header extends StatelessWidget {
                     )),
                 child: Container(
                   padding: EdgeInsets.only(
-                      left: 15, right: 15, top: appbarSize, bottom: 10),
+                      left: 15, right: 15, top: appbarSize, bottom: 5),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [if (widget != null) widget],
@@ -105,10 +105,7 @@ class Header extends StatelessWidget {
             ],
           ),
           SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: isi,
-            ),
+            child: isi,
           ),
         ],
       ),

@@ -1,6 +1,8 @@
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:minicrm/screen/dashboard/dashboard_screen.dart';
+import 'package:minicrm/screen/download/download_screen.dart';
+import 'package:minicrm/screen/navbar/cus_tab_bar.dart';
 import 'package:minicrm/screen/profile/profile_screen.dart';
 import 'package:minicrm/screen/riwayat/riwayat_screen.dart';
 import 'package:minicrm/screen/sync/sync_screen.dart';
@@ -15,7 +17,7 @@ class _NavigationBarState extends State<NavigationBar> {
   int selectedIndex = 0;
   static const List<Widget> _screens = <Widget>[
     DashboardScreen(),
-    SyncScreen(),
+    CustomeTabBar("Sync & Download", ["Informasi", "Profil", "Lokasi"], [SyncScreen(), DownloadScreen(), SyncScreen()]),
     RiwayatScreen(),
     ProfileScreen()
   ];

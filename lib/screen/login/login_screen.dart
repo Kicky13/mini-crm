@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:minicrm/helper/action_text.dart';
 import 'package:minicrm/helper/rounded_button.dart';
-import 'package:minicrm/helper/rounded_text_field.dart';
 import 'package:minicrm/helper/custom_text_field.dart';
 import 'package:minicrm/screen/login/login_screen_model.dart';
 import 'package:minicrm/util/resource/my_color.dart';
@@ -27,13 +24,6 @@ class _LoginScreenState extends LoginScreenModel {
         width: double.infinity,
         child: Stack(
           children: [
-//            Positioned(
-//                bottom: 0,
-//                right: 0,
-//                child: Image.asset(
-//                  "assets/images/login_bottom.png",
-//                  width: size.width * 0.4,
-//                )),
             SafeArea(
               child: SingleChildScrollView(
                 child: Column(
@@ -314,10 +304,8 @@ class _LoginScreenState extends LoginScreenModel {
             pinTextStyle: TextStyle(fontSize: 22.0),
             pinTextAnimatedSwitcherTransition:
             ProvidedPinBoxTextAnimation.scalingTransition,
-//                    pinBoxColor: Colors.green[100],
             pinTextAnimatedSwitcherDuration:
             Duration(milliseconds: 100),
-//                    highlightAnimation: true,
             highlightAnimationBeginColor: Colors.black,
             highlightAnimationEndColor: Colors.white12,
             keyboardType: TextInputType.number,

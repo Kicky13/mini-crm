@@ -7,6 +7,8 @@ class MyColor {
   static const Color kPrimaryLightColor = Color(0xFFF1E6FF);
   static const Color warnaTema = Colors.black;
   static const Color warnaKonten = Colors.white;
+  static const Color warnaMerah = Color(0xFFF4343C);
+  static const Color warnaAbuMuda = Color(0xFFE6E6E6);
 
   static const Color PrimaryBlue = Color(0xFF388EFB);
   static const Color TextLoginTitle = Color(0xFF767676);

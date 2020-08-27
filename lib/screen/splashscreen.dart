@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:minicrm/app/my_router.dart';
 import 'package:minicrm/util/my_pref.dart';
-import 'package:minicrm/util/resource/my_color.dart';
 import 'package:minicrm/util/resource/my_dimen.dart';
 import 'package:package_info/package_info.dart';
 
