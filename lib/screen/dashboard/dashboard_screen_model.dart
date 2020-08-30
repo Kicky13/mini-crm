@@ -41,7 +41,9 @@ abstract class DashboardScreenModel extends State<DashboardScreen> {
 
   statistikKunjungan() {}
 
-  pelanggan() {}
+  pelanggan() {
+    Navigator.pushNamed(context, Pelanggan);
+  }
 
   penilaianSales() {}
 

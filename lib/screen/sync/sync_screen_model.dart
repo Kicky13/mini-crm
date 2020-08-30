@@ -10,16 +10,16 @@ abstract class SyncScreenModel extends State<SyncScreen>
   List<Tab> tabList = <Tab>[];
   TabController tabController;
 
-  @override
-  void initState() {
-    super.initState();
-    tabList.add(Tab(
-      text: 'Sync',
-    ));
-    tabList.add(Tab(
-      text: 'Download',
-    ));
-    tabController = TabController(vsync: this, length: tabList.length);
+  setTabController() {
+    setState(() {
+      tabList.add(Tab(
+        text: 'Sync',
+      ));
+      tabList.add(Tab(
+        text: 'Download',
+      ));
+      tabController = TabController(vsync: this, length: tabList.length);
+    });
   }
 
   @override
@@ -28,15 +28,21 @@ abstract class SyncScreenModel extends State<SyncScreen>
     super.dispose();
   }
 
+  @override
+  void initState() {
+    setTabController();
+    super.initState();
+  }
+
   pressCheckData() async {
-    final dataList = await CustomerDB.getData('customer');
+    final dataList = await CustomerDB.getData();
     print(jsonEncode(dataList));
   }
 
   pressDownload() async {
     print(APIConfig.downloadCustomer);
     var sendHttp = await http.post(APIConfig.downloadCustomer, headers: {
-      "token": APIConfig.loginToken,
+      "token": "",
       "Content-Type": "application/x-www-form-urlencoded"
     }, body: {
       "id_sales": "3360",

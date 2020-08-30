@@ -29,6 +29,8 @@ class _SyncScreenState extends SyncScreenModel {
               ),
             ),
             Container(
+              height: 100,
+              width: 100,
               child: TabBarView(
                 controller: tabController,
                 children: tabList.map((Tab tab) {
