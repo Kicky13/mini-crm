@@ -39,9 +39,7 @@ class ProgramsCard extends StatelessWidget {
                           children: [
                             Text(
                               program.jUDUL_PROGRAM,
-                              style: textStyle.copyWith(
-                                  color: MyColor.warnaTema,
-                                  fontWeight: FontWeight.w400),
+                              style: titleTextStyle,
                               maxLines: 1,
                               textAlign: TextAlign.left,
                             ),
@@ -50,9 +48,8 @@ class ProgramsCard extends StatelessWidget {
                             ),
                             Text(
                               program.dETAIL_PROGRAM,
-                              style: textStyle.copyWith(
+                              style: blackSmallText.copyWith(
                                 fontSize: 15,
-                                color: MyColor.warnaTema,
                               ),
                               maxLines: 2,
                               textAlign: TextAlign.justify,
@@ -70,18 +67,18 @@ class ProgramsCard extends StatelessWidget {
                     children: [
                       Text(
                         program.sTART_DATE,
-                        style: textStyle.copyWith(
-                            fontSize: 15, color: MyColor.warnaTema),
+                        style: blackSmallText.copyWith(
+                            fontSize: 15),
                       ),
                       Text(
                         "s/d",
-                        style: textStyle.copyWith(
-                            fontSize: 15, color: MyColor.warnaTema),
+                        style: blackSmallText.copyWith(
+                            fontSize: 15),
                       ),
                       Text(
                         program.eND_DATE,
-                        style: textStyle.copyWith(
-                            fontSize: 15, color: MyColor.warnaTema),
+                        style: blackSmallText.copyWith(
+                            fontSize: 15),
                       ),
                     ],
                   )

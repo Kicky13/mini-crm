@@ -7,6 +7,7 @@ import 'package:minicrm/screen/profile/profile_screen.dart';
 import 'package:minicrm/screen/riwayat/riwayat_screen.dart';
 import 'package:minicrm/screen/sync/sync_screen.dart';
 import 'package:minicrm/util/resource/my_color.dart';
+import 'package:minicrm/util/resource/my_style.dart';
 
 class NavigationBar extends StatefulWidget {
   @override
@@ -33,15 +34,17 @@ class _NavigationBarState extends State<NavigationBar> {
       ),
       bottomNavigationBar: FFNavigationBar(
         theme: FFNavigationBarTheme(
-          barBackgroundColor: Colors.red[400],
-          selectedItemBorderColor: Colors.red[400],
-          selectedItemBackgroundColor: MyColor.warnaTema,
-          selectedItemIconColor: MyColor.warnaKonten,
-          selectedItemLabelColor: MyColor.warnaKonten,
+          barBackgroundColor: MyColor.warnaMerah,
+          selectedItemBorderColor: MyColor.warnaMerah,
+          selectedItemBackgroundColor: MyColor.warnaHitam,
+          selectedItemIconColor: MyColor.warnaPutih,
+          selectedItemLabelColor: MyColor.warnaPutih,
           showSelectedItemShadow: false,
           barHeight: 55,
-          unselectedItemIconColor: MyColor.warnaKonten,
-          unselectedItemLabelColor: MyColor.warnaKonten,
+          unselectedItemIconColor: MyColor.warnaPutih,
+          unselectedItemLabelColor: MyColor.warnaPutih,
+          unselectedItemTextStyle: whiteSmallText,
+          selectedItemTextStyle: whiteSmallText.copyWith(fontWeight: FontWeight.bold),
         ),
         selectedIndex: selectedIndex,
         onSelectTab: (index) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:minicrm/app/my_router.dart';
+import 'package:minicrm/util/resource/my_dimen.dart';
 import 'package:minicrm/util/resource/my_style.dart';
 import 'package:minicrm/util/resource/my_color.dart';
 
@@ -38,7 +39,7 @@ class Header extends StatelessWidget {
                   },
                   child: Icon(
                     Icons.arrow_back,
-                    color: MyColor.warnaKonten,
+                    color: MyColor.warnaPutih,
                   ),
                 ),
               Padding(
@@ -60,14 +61,14 @@ class Header extends StatelessWidget {
                 children: <Widget>[
                   Icon(
                     Icons.cake,
-                    color: MyColor.warnaKonten,
+                    color: MyColor.warnaPutih,
                   ),
                   CircleAvatar(
                     radius: 7.6,
                     backgroundColor: Colors.redAccent,
                     child: Text(
                       "$birthCount",
-                      style: TextStyle(fontSize: 11.0, color: Colors.white),
+                      style: whiteSmallText.copyWith(fontSize: 12),
                     ),
                   )
                 ],
@@ -87,10 +88,10 @@ class Header extends StatelessWidget {
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: MyColor.warnaTema,
+                    color: MyColor.warnaHitam,
                     borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(40),
-                      bottomLeft: Radius.circular(40),
+                      bottomRight: Radius.circular(MyDimen.roundedTopBar),
+                      bottomLeft: Radius.circular(MyDimen.roundedTopBar),
                     )),
                 child: Container(
                   padding:

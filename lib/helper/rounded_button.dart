@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:minicrm/util/resource/my_color.dart';
+import 'package:minicrm/util/resource/my_style.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
@@ -11,7 +12,7 @@ class RoundedButton extends StatelessWidget {
     this.text,
     this.press,
     this.textColor = Colors.white,
-    this.color = MyColor.kPrimaryRedColor,
+    this.color = MyColor.warnaMerah,
   }) : super(key: key);
 
   @override
@@ -28,7 +29,7 @@ class RoundedButton extends StatelessWidget {
           onPressed: press,
           child: Text(
             text,
-            style: TextStyle(color: textColor, fontSize: 17),
+            style: titleTextStyle.copyWith(color: textColor),
           ),
         ),
       ),

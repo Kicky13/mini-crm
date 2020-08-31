@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mini CRM',
       theme: ThemeData(
-        primaryColor: MyColor.kPrimaryColor,
+        primaryColor: MyColor.warnaHitam,
         scaffoldBackgroundColor: Colors.white,
       ),
       home: SplashScreen(),

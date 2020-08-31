@@ -123,16 +123,6 @@ class VisitScheduleItemList extends StatelessWidget {
           ),
         ),
       ),
-//      decoration: BoxDecoration(
-//        boxShadow: [
-//          BoxShadow(
-//            color: Colors.grey.withOpacity(0.1),
-//            spreadRadius: 1,
-//            blurRadius: 1,
-//            offset: Offset(0, 5), // changes position of shadow
-//          ),
-//        ],
-//      ),
     );
   }
 }

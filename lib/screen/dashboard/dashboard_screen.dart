@@ -7,6 +7,7 @@ import 'package:minicrm/helper/programs_card.dart';
 import 'package:minicrm/helper/rounded_background.dart';
 import 'package:minicrm/screen/dashboard/dashboard_screen_model.dart';
 import 'package:minicrm/util/resource/my_color.dart';
+import 'package:minicrm/util/resource/my_dimen.dart';
 import 'package:minicrm/util/resource/my_style.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -39,14 +40,14 @@ class _DashboardScreenState extends DashboardScreenModel {
               children: <Widget>[
                 Icon(
                   Icons.cake,
-                  color: MyColor.warnaKonten,
+                  color: MyColor.warnaPutih,
                 ),
                 CircleAvatar(
                   radius: 7.6,
                   backgroundColor: Colors.redAccent,
                   child: Text(
                     "2",
-                    style: TextStyle(fontSize: 11.0, color: Colors.white),
+                    style: whiteSmallText.copyWith(fontSize: 12),
                   ),
                 )
               ],
@@ -71,7 +72,7 @@ class _DashboardScreenState extends DashboardScreenModel {
                   Text(
                     "January 2020",
                     overflow: TextOverflow.ellipsis,
-                    style: textStyle.copyWith(fontSize: 13),
+                    style: whiteSmallText,
                   ),
                   Colors.white30,
                   7,
@@ -80,36 +81,36 @@ class _DashboardScreenState extends DashboardScreenModel {
                 ),
                 Text(
                   "Hi, Anonim",
-                  style: textStyle.copyWith(fontSize: 20),
+                  style: whiteSmallText.copyWith(fontSize: 20),
                 )
               ],
             ),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MiniInfoCard("Volume Selling Out", "14.87 %",
-                    Icons.arrow_drop_down, "2,297", "16.000 Ton", Colors.red),
+                    Icons.arrow_drop_down, "2,297", "16.000 Ton", MyColor.warnaMerah),
                 MiniInfoCard("Kunjungan Customer", "200 %", Icons.arrow_drop_up,
                     "2", "1", Colors.green),
               ],
             ),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MiniInfoCard("Volume Selling Out", "14.87 %",
-                    Icons.arrow_drop_down, "2,297", "16.000 Ton", Colors.red),
+                    Icons.arrow_drop_down, "2,297", "16.000 Ton", MyColor.warnaMerah),
                 MiniInfoCard("Kunjungan Customer", "200 %", Icons.arrow_drop_up,
                     "2", "1", Colors.green),
               ],
             ),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
             MiniInfoCard("Kunjungan Customer", "200 %", Icons.arrow_drop_up,
                 "2", "1", Colors.green),
@@ -140,7 +141,7 @@ class _DashboardScreenState extends DashboardScreenModel {
       width: double.infinity,
       child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
         CarouselSlider(
-          height: 295,
+          height: 305,
           initialPage: 0,
           autoPlay: true,
           reverse: false,
@@ -210,10 +211,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                   "Toko Aktif",
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      color: MyColor.warnaTema),
+                  style: titleTextStyle.copyWith(
+                      fontSize: 15,),
                   textAlign: TextAlign.left,
                 ),
               ),
@@ -233,10 +232,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                               left: 15, right: 15, top: 40),
                           child: Text(
                             "200",
-                            style: TextStyle(
-                                fontSize: 55,
-                                fontWeight: FontWeight.w400,
-                                color: MyColor.warnaTema),
+                            style: titleTextStyle.copyWith(
+                                fontSize: 55),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -245,10 +242,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                               top: 15, left: 15, right: 15, bottom: 25),
                           child: Text(
                             "Aktif",
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w400,
-                                color: MyColor.warnaTema),
+                            style: titleTextStyle.copyWith(
+                                fontSize: 25),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -268,10 +263,9 @@ class _DashboardScreenState extends DashboardScreenModel {
                               left: 15, right: 15, top: 40),
                           child: Text(
                             "165",
-                            style: TextStyle(
+                            style: titleTextStyle.copyWith(
                                 fontSize: 55,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.red),
+                                color: MyColor.warnaMerah),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -280,10 +274,9 @@ class _DashboardScreenState extends DashboardScreenModel {
                               top: 15, left: 15, right: 15, bottom: 25),
                           child: Text(
                             "Non - Aktif",
-                            style: TextStyle(
+                            style: titleTextStyle.copyWith(
                                 fontSize: 25,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.red),
+                                color: MyColor.warnaMerah),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -311,10 +304,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                   "Kunjungan Sales",
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
-                      color: MyColor.warnaTema),
+                  style: titleTextStyle.copyWith(
+                      fontSize: 15,),
                 ),
               ),
               Container(
@@ -337,9 +328,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                           ),
                           Text(
                             "200.00 %",
-                            style: TextStyle(
+                            style: blackSmallText.copyWith(
                                 fontSize: 20,
-                                fontWeight: FontWeight.w300,
                                 color: Colors.green),
                           ),
                         ],
@@ -351,10 +341,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                         children: [
                           Text(
                             "125",
-                            style: TextStyle(
-                                fontSize: 50,
-                                fontWeight: FontWeight.w400,
-                                color: MyColor.warnaTema),
+                            style: titleTextStyle.copyWith(
+                                fontSize: 50,),
                           ),
                         ],
                       ),
@@ -371,10 +359,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                       children: [
                         Text(
                           "Target :",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w300,
-                              color: MyColor.warnaTema),
+                          style: blackSmallText.copyWith(
+                              fontSize: 20,),
                         ),
                       ],
                     ),
@@ -385,10 +371,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                       children: [
                         Text(
                           "110",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                              color: MyColor.warnaTema),
+                          style: blackSmallText.copyWith(
+                              fontSize: 20,),
                         ),
                       ],
                     ),
@@ -412,10 +396,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                               left: 15, right: 15, top: 5),
                           child: Text(
                             "Kemarin :",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w300,
-                                color: MyColor.warnaTema),
+                            style: blackSmallText.copyWith(
+                                fontSize: 20),
                             textAlign: TextAlign.left,
                           ),
                         ),
@@ -424,10 +406,9 @@ class _DashboardScreenState extends DashboardScreenModel {
                               right: 15, left: 15, bottom: 5),
                           child: Text(
                             "0",
-                            style: TextStyle(
+                            style: blackSmallText.copyWith(
                                 fontSize: 30,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.red),
+                                color: MyColor.warnaMerah),
                             textAlign: TextAlign.right,
                           ),
                         ),
@@ -448,10 +429,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                               left: 15, right: 15, top: 5),
                           child: Text(
                             "Hari ini :",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w300,
-                                color: MyColor.warnaTema),
+                            style: blackSmallText.copyWith(
+                                fontSize: 20,),
                             textAlign: TextAlign.left,
                           ),
                         ),
@@ -460,10 +439,8 @@ class _DashboardScreenState extends DashboardScreenModel {
                               right: 15, left: 15, bottom: 5),
                           child: Text(
                             "10",
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.w300,
-                                color: MyColor.warnaTema),
+                            style: blackSmallText.copyWith(
+                                fontSize: 30,),
                             textAlign: TextAlign.right,
                           ),
                         ),
@@ -476,10 +453,9 @@ class _DashboardScreenState extends DashboardScreenModel {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   "Selengkapnya...",
-                  style: TextStyle(
+                  style: blackSmallText.copyWith(
                       fontSize: 18,
-                      fontWeight: FontWeight.w300,
-                      color: Colors.red),
+                      color: MyColor.warnaMerah),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -501,16 +477,16 @@ class _DashboardScreenState extends DashboardScreenModel {
                     height: tinggiTopContent + 50,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: MyColor.warnaTema,
+                        color: MyColor.warnaHitam,
                         borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(45),
-                          bottomLeft: Radius.circular(45),
+                          bottomRight: Radius.circular(MyDimen.roundedTopBar),
+                          bottomLeft: Radius.circular(MyDimen.roundedTopBar),
                         )),
                     child: Column(
                       children: [
                         _topContent,
                         SizedBox(
-                          height: 15,
+                          height: 10,
                         ),
                         GestureDetector(
                           onTap: () => naikTurun(),
@@ -519,11 +495,11 @@ class _DashboardScreenState extends DashboardScreenModel {
                             children: [
                               Text(
                                 ketNaikTurun,
-                                style: textStyle,
+                                style: whiteSmallText.copyWith(fontSize:18,color: MyColor.warnaPutih),
                               ),
                               Icon(
                                 panah,
-                                color: Colors.red,
+                                color: MyColor.warnaMerah,
                               )
                             ],
                           ),
@@ -549,7 +525,7 @@ class _DashboardScreenState extends DashboardScreenModel {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         Text("Berita",
-                            style: textStyle.copyWith(color: MyColor.warnaTema))
+                            style: titleTextStyle)
                       ],
                     ),
                   ),
@@ -562,7 +538,7 @@ class _DashboardScreenState extends DashboardScreenModel {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         Text("Program",
-                            style: textStyle.copyWith(color: MyColor.warnaTema))
+                            style: titleTextStyle)
                       ],
                     ),
                   ),
