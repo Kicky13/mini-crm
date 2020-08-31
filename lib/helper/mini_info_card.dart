@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:minicrm/util/resource/my_color.dart';
 import 'package:minicrm/util/resource/my_style.dart';
 
+// ignore: must_be_immutable
 class MiniInfoCard extends StatelessWidget {
-
   String title;
   String persen;
   IconData icon;
@@ -11,16 +11,17 @@ class MiniInfoCard extends StatelessWidget {
   String target;
   Color warna;
 
-  MiniInfoCard(this.title, this.persen, this.icon, this.value, this.target, this.warna);
+  MiniInfoCard(
+      this.title, this.persen, this.icon, this.value, this.target, this.warna);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.all(10.0),
-      width: (size.width - 45)/2,
+      width: (size.width - 45) / 2,
       decoration: BoxDecoration(
-        color: MyColor.warnaKonten,
+        color: MyColor.warnaPutih,
         borderRadius: BorderRadius.all(Radius.circular(12.0)),
         boxShadow: [
           BoxShadow(
@@ -35,7 +36,7 @@ class MiniInfoCard extends StatelessWidget {
           Text(
             title,
             overflow: TextOverflow.ellipsis,
-            style: textStyle.copyWith(fontSize: 15, color: MyColor.warnaTema),
+            style: titleTextStyle.copyWith(fontSize: 15),
           ),
           SizedBox(
             height: 10,
@@ -53,15 +54,16 @@ class MiniInfoCard extends StatelessWidget {
                   Text(
                     persen,
                     overflow: TextOverflow.ellipsis,
-                    style: textStyle.copyWith(fontSize: 13, color: warna),
+                    style: blackSmallText.copyWith(color: warna),
                   ),
                 ],
               ),
               Text(
                 value,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontSize: 25, color: MyColor.warnaTema, fontWeight: FontWeight.w400),
+                style: blackSmallText.copyWith(
+                  fontSize: 25,
+                ),
               ),
             ],
           ),
@@ -74,12 +76,12 @@ class MiniInfoCard extends StatelessWidget {
               Text(
                 "Target :",
                 overflow: TextOverflow.ellipsis,
-                style: textStyle.copyWith(fontSize: 13, color: MyColor.warnaTema),
+                style: blackSmallText,
               ),
               Text(
                 target,
                 overflow: TextOverflow.ellipsis,
-                style: textStyle.copyWith(fontSize: 13, color: MyColor.warnaTema),
+                style: blackSmallText,
               ),
             ],
           ),

@@ -16,7 +16,7 @@ class _LoginScreenState extends LoginScreenModel {
 
   @override
   Widget build(BuildContext context) {
-    FlutterStatusbarcolor.setStatusBarColor(MyColor.kPrimaryColor);
+    FlutterStatusbarcolor.setStatusBarColor(MyColor.warnaHitam);
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
@@ -34,7 +34,7 @@ class _LoginScreenState extends LoginScreenModel {
                         top: 30,
                       ),
                       decoration: BoxDecoration(
-                        color: MyColor.kPrimaryColor,
+                        color: MyColor.warnaHitam,
                         borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(45.0),
                           bottomLeft: Radius.circular(45.0)
@@ -143,7 +143,7 @@ class _LoginScreenState extends LoginScreenModel {
                 child: Text(
                   "Forgot?",
                   style: TextStyle(
-                      color: MyColor.kPrimaryRedColor,
+                      color: MyColor.warnaMerah,
                       fontWeight: FontWeight.bold
                   ),
                 ),

@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:minicrm/util/resource/my_color.dart';
 
-var textStyle = TextStyle(
-    fontSize: 18, color: MyColor.warnaKonten, fontWeight: FontWeight.w400);
-var textStyleAppbar = TextStyle(
-    fontSize: 23, color: MyColor.warnaKonten, fontWeight: FontWeight.w400);
+var baseFont = TextStyle(fontFamily: 'Helvetica');
+var titleTextStyle = baseFont.copyWith(
+    fontSize: 18, color: MyColor.warnaHitam, fontWeight: FontWeight.bold);
+var textStyleAppbar = baseFont.copyWith(
+    fontSize: 23, color: MyColor.warnaPutih);
+var whiteSmallText = baseFont.copyWith(
+    fontSize: 14, color: MyColor.warnaPutih);
+var blackSmallText = baseFont.copyWith(
+    fontSize: 14, color: MyColor.warnaHitam);

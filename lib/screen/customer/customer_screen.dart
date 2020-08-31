@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:minicrm/helper/header.dart';
 import 'package:minicrm/helper/rounded_background.dart';
 import 'package:minicrm/screen/riwayat/riwayat_screen_model.dart';
+import 'package:minicrm/util/resource/my_color.dart';
 import 'package:minicrm/util/resource/my_style.dart';
 
 class RiwayatScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _RiwayatScreenState extends RiwayatScreenModel {
             Text(
               "January 2020",
               overflow: TextOverflow.ellipsis,
-              style: textStyle.copyWith(fontSize: 13),
+              style: titleTextStyle.copyWith(fontSize: 13, color: MyColor.warnaPutih),
             ),
             Colors.white30,
             7,

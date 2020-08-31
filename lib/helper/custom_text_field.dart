@@ -39,7 +39,7 @@ class CustomTextField extends StatelessWidget {
             ? IconButton(
                 icon: Icon(
                   isPass ? Icons.visibility_off : Icons.visibility,
-                  color: MyColor.kPrimaryColor,
+                  color: MyColor.warnaHitam,
                 ),
                 onPressed: press,
             )
