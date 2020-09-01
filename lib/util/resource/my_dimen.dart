@@ -3,4 +3,5 @@ class MyDimen {
   static double fontSizeTitle = 18;
   static double fontSizeLoginTitle = 20;
   static double fontSizeLoginLabel = 15;
+  static double roundedTopBar = 40;
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:minicrm/helper/rounded_background.dart';
 import 'package:minicrm/util/resource/my_color.dart';
+import 'package:minicrm/util/resource/my_style.dart';
 
 class IconMenu extends StatelessWidget {
   String asset;
@@ -28,10 +29,7 @@ class IconMenu extends StatelessWidget {
         ),
         Text(
           keterangan,
-          style: TextStyle(
-              fontSize: 14,
-              color: MyColor.warnaTema,
-              fontWeight: FontWeight.w400),
+          style: blackSmallText,
           textAlign: TextAlign.center,
         ),
       ],

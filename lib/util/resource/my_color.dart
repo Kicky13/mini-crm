@@ -2,11 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class MyColor {
-  static const Color kPrimaryColor = Colors.black;
-  static const Color kPrimaryRedColor = Color(0xFFF4343C);
-  static const Color kPrimaryLightColor = Color(0xFFF1E6FF);
-  static const Color warnaTema = Colors.black;
-  static const Color warnaKonten = Colors.white;
+  static const Color warnaHitam = Colors.black;
+  static const Color warnaPutih = Colors.white;
   static const Color warnaMerah = Color(0xFFF4343C);
   static const Color warnaAbuMuda = Color(0xFFE6E6E6);
 

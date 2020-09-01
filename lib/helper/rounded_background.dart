@@ -35,7 +35,7 @@ class RoundedBackground extends StatelessWidget {
             if (isUseIcon)
               Icon(
                 Icons.keyboard_arrow_down,
-                color: MyColor.warnaKonten,
+                color: MyColor.warnaPutih,
                 size: 16,
               ),
           ],

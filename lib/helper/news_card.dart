@@ -35,15 +35,13 @@ class NewsCard extends StatelessWidget {
                         placeholder: AssetImage("assets/images/news.jpg")),
                   )),
               Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                       Text(
                         berita.tITLE,
-                        style: textStyle.copyWith(
-                            color: MyColor.warnaTema,
-                            fontWeight: FontWeight.w400),
+                        style: titleTextStyle,
                         maxLines: 2,
                       ),
                       Padding(
@@ -51,8 +49,8 @@ class NewsCard extends StatelessWidget {
                       ),
                       Text(
                         berita.dISCRIPTION,
-                        style: textStyle.copyWith(
-                            fontSize: 15, color: MyColor.warnaTema),
+                        style: blackSmallText.copyWith(
+                            fontSize: 15),
                         maxLines: 3,
                       ),
                       Padding(
@@ -63,12 +61,12 @@ class NewsCard extends StatelessWidget {
                         children: [
                           Text(
                             berita.pUP_DATE,
-                            style: textStyle.copyWith(
-                                fontSize: 15, color: MyColor.warnaTema),
+                            style: blackSmallText.copyWith(
+                                fontSize: 15),
                           ),
                           Text(
                             "Selengkapnya >",
-                            style: textStyle.copyWith(
+                            style: blackSmallText.copyWith(
                                 fontSize: 15, color: Colors.red),
                           ),
                         ],

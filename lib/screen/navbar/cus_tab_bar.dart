@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:minicrm/helper/header.dart';
 import 'package:minicrm/util/resource/my_color.dart';
+import 'package:minicrm/util/resource/my_style.dart';
 import 'package:toggle_bar/toggle_bar.dart';
 
 class CustomeTabBar extends StatefulWidget {
@@ -24,8 +25,8 @@ class _CustomeTabBarState extends State<CustomeTabBar> {
           labels: widget.labels,
           backgroundColor: MyColor.warnaAbuMuda,
           selectedTabColor: MyColor.warnaMerah,
-          textColor:MyColor.warnaTema,
-          labelTextStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+          textColor:MyColor.warnaHitam,
+          labelTextStyle: titleTextStyle.copyWith(fontSize: 15),
           onSelectionUpdated: (index) =>
               setState(() => currentIndex = index),
         ),

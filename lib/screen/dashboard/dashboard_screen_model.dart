@@ -27,7 +27,7 @@ abstract class DashboardScreenModel extends State<DashboardScreen> {
 
   naikTurun() {
     setState(() {
-      tinggiTopContent == 230 ? tinggiTopContent = 460 : tinggiTopContent = 230;
+      tinggiTopContent == 230 ? tinggiTopContent = 450 : tinggiTopContent = 230;
       panah == Icons.keyboard_arrow_down
           ? panah = Icons.keyboard_arrow_up
           : panah = Icons.keyboard_arrow_down;
