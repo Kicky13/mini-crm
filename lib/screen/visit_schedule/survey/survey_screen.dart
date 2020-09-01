@@ -115,7 +115,7 @@ class _SurveyScreenState extends SurveyScreenModel {
           labels: ["Produk", "Keluhan", "Promosi"],
           backgroundColor: MyColor.warnaAbuMuda,
           selectedTabColor: MyColor.warnaMerah,
-          textColor: MyColor.warnaTema,
+          textColor: Colors.white,
           labelTextStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
           onSelectionUpdated: onSelectionUpdated,
         ),
