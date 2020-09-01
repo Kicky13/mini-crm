@@ -18,7 +18,7 @@ abstract class DashboardScreenModel extends State<DashboardScreen> {
   int currentProgram = 0;
   List<News> berita = List<News>();
   List<Program> program = List<Program>();
-  var token = MyPref.getForcaToken();
+  var token = MyPref.getCRMToken();
   String message = "";
   String message2 = "";
   String id_user = "1175";
@@ -37,9 +37,13 @@ abstract class DashboardScreenModel extends State<DashboardScreen> {
     });
   }
 
-  jadwalKunjungan() {}
+  jadwalKunjungan() {
+    Navigator.pushNamed(context, VisitSchedule);
+  }
 
-  statistikKunjungan() {}
+  statistikKunjungan() {
+    Navigator.pushNamed(context, Statistic);
+  }
 
   pelanggan() {
     Navigator.pushNamed(context, Pelanggan);

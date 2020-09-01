@@ -30,7 +30,7 @@ class _DashboardScreenState extends DashboardScreenModel {
         children: <Widget>[
           Text(
             "Dashboard",
-            style: textStyle.copyWith(fontSize: 28),
+            style: textStyleAppbar,
           ),
           InkWell(
             onTap: () => goToUltah(),

@@ -37,15 +37,15 @@ class Header extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                   child: Icon(
-                    Icons.arrow_back_ios,
+                    Icons.arrow_back,
                     color: MyColor.warnaKonten,
                   ),
                 ),
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 25),
                 child: Text(
                   title,
-                  style: textStyle.copyWith(fontSize: 28),
+                  style: textStyleAppbar,
                 ),
               ),
             ],
@@ -89,15 +89,23 @@ class Header extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: MyColor.warnaTema,
                     borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(45),
-                      bottomLeft: Radius.circular(45),
+                      bottomRight: Radius.circular(40),
+                      bottomLeft: Radius.circular(40),
                     )),
                 child: Container(
-                  padding: EdgeInsets.only(
-                      left: 15, right: 15, top: appbarSize, bottom: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [if (widget != null) widget],
+                  padding:
+                      EdgeInsets.only(left: 15, right: 15, top: appbarSize),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [if (widget != null) widget],
+                      ),
+                      if (widget != null)
+                        SizedBox(
+                          height: 10,
+                        ),
+                    ],
                   ),
                 ),
               ),
@@ -105,10 +113,7 @@ class Header extends StatelessWidget {
             ],
           ),
           SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: isi,
-            ),
+            child: isi,
           ),
         ],
       ),

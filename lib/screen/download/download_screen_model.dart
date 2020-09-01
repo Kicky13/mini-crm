@@ -1,36 +1,16 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:minicrm/screen/sync/sync_screen.dart';
-import 'package:http/http.dart' as http;
+import 'package:minicrm/screen/download/download_screen.dart';
 import 'package:minicrm/api/api_config.dart';
+import 'package:http/http.dart' as http;
 import 'package:minicrm/helper/database_helper.dart';
+import 'package:minicrm/util/my_pref.dart';
 
-abstract class SyncScreenModel extends State<SyncScreen>
-    with SingleTickerProviderStateMixin {
-  List<Tab> tabList = <Tab>[];
-  TabController tabController;
-
-  setTabController() {
-    setState(() {
-      tabList.add(Tab(
-        text: 'Sync',
-      ));
-      tabList.add(Tab(
-        text: 'Download',
-      ));
-      tabController = TabController(vsync: this, length: tabList.length);
-    });
-  }
-
-  @override
-  void dispose() {
-    tabController.dispose();
-    super.dispose();
-  }
+abstract class DownloadScreenModel extends State<DownloadScreen> {
+  var token = MyPref.getCRMToken();
 
   @override
   void initState() {
-    setTabController();
     super.initState();
   }
 
@@ -39,10 +19,10 @@ abstract class SyncScreenModel extends State<SyncScreen>
     print(jsonEncode(dataList));
   }
 
-  pressDownload() async {
+  pressDownloadCustomer() async {
     print(APIConfig.downloadCustomer);
     var sendHttp = await http.post(APIConfig.downloadCustomer, headers: {
-      "token": "",
+      "token": token,
       "Content-Type": "application/x-www-form-urlencoded"
     }, body: {
       "id_sales": "3360",
@@ -62,7 +42,7 @@ abstract class SyncScreenModel extends State<SyncScreen>
           'kTPPEMILIK': e['NOKTP_PEMILIK'].toString(),
           'kETERANGAN': e['KETERANGAN'].toString(),
           'kODEPOS': e['KODE_POS'].toString(),
-          'kAPASITASTOKO': e['ID_CUSTOMER'].toString(),
+          'kAPASITASTOKO': e['KAPASITAS_TOKO'].toString(),
           'tELPTOKO': e['TELP_TOKO'].toString(),
           'tELPPEMILIK': e['TELP_PEMILIK'].toString(),
           'iDDISTRIBUTOR': e['ID_DISTRIBUTOR'],
