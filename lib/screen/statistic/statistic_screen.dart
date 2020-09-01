@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:minicrm/helper/header.dart';
 import 'package:minicrm/screen/statistic/statistic_screen_model.dart';
 
 class StatisticScreen extends StatefulWidget {
@@ -10,10 +9,12 @@ class StatisticScreen extends StatefulWidget {
 class _StatisticScreenState extends StatisticScreenModel {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Header(
-        "Statistik Kunjungan",
-        Container(
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Statistik Kunjungan"),
+        ),
+        body: Container(
             child: Column(
           children: [
             Container(
@@ -22,12 +23,12 @@ class _StatisticScreenState extends StatisticScreenModel {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  GestureDetector(
-                      child: Icon(
+                  IconButton(
+                      icon: Icon(
                         Icons.chevron_left,
                         size: 26,
                       ),
-                      onTap: () {
+                      onPressed: () {
                         prevDate();
                       }),
                   Expanded(
@@ -39,12 +40,12 @@ class _StatisticScreenState extends StatisticScreenModel {
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   )),
-                  GestureDetector(
-                      child: Icon(
+                  IconButton(
+                      icon: Icon(
                         Icons.chevron_right,
                         size: 26,
                       ),
-                      onTap: () {
+                      onPressed: () {
                         nextDate();
                       }),
                 ],
