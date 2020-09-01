@@ -8,7 +8,7 @@ class Header extends StatelessWidget {
   String title;
   bool isIconBirth;
   Widget widget;
-  bool isBack;
+  bool isBack, isDisableMaxHeight;
   int birthCount;
   Widget isi;
 
@@ -16,6 +16,7 @@ class Header extends StatelessWidget {
       {this.isIconBirth = false,
       this.birthCount = 0,
       this.isBack = true,
+      this.isDisableMaxHeight = false,
       this.widget});
 
   @override
@@ -80,7 +81,7 @@ class Header extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      height: size.height,
+      height: (isDisableMaxHeight)?null:size.height,
       child: Column(
         children: [
           Stack(

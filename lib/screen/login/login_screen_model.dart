@@ -109,7 +109,4 @@ abstract class LoginScreenModel extends State<LoginScreen> {
     Navigator.pushNamed(context, ForgotPass);
   }
 
-  prosesLogout(){
-    Navigator.pushReplacementNamed(context, Login);
-  }
 }
