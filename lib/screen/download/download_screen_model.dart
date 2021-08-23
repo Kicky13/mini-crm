@@ -8,6 +8,9 @@ import 'package:minicrm/util/my_pref.dart';
 
 abstract class DownloadScreenModel extends State<DownloadScreen> {
   var token = MyPref.getCRMToken();
+  bool isDownloadCustomer = false,
+      isDownloadSurvey = false,
+      isDownloadComponent = false;
 
   @override
   void initState() {
@@ -20,6 +23,9 @@ abstract class DownloadScreenModel extends State<DownloadScreen> {
   }
 
   pressDownloadCustomer() async {
+    setState(() {
+      isDownloadCustomer = true;
+    });
     print(APIConfig.downloadCustomer);
     var sendHttp = await http.post(APIConfig.downloadCustomer, headers: {
       "token": token,
@@ -76,6 +82,9 @@ abstract class DownloadScreenModel extends State<DownloadScreen> {
         });
       }).toList();
       print('Insert DB done');
+      setState(() {
+        isDownloadCustomer = false;
+      });
     } else {
       print('Failed to Connect server');
     }

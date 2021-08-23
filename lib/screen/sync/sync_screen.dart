@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:minicrm/screen/sync/sync_screen_model.dart';
+import 'package:minicrm/helper/sync_card.dart';
 
 class SyncScreen extends StatefulWidget {
   const SyncScreen({Key key}) : super(key: key);
@@ -54,61 +55,12 @@ class _SyncScreenState extends SyncScreenModel {
         ),
       ),
     );
-    var _customer = Card(
-      margin: EdgeInsets.fromLTRB(1, 5, 1, 5),
-      color: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      child: Container(
-        width: double.infinity,
-        margin: EdgeInsets.all(5),
-        padding: EdgeInsets.all(10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 2,
-              child: Image.asset(
-                'assets/icons/pelanggan.png',
-                width: size.width / 6,
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.tight,
-              flex: 6,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Sync Customer',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Status: Complete',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 10),
-                  )
-                ],
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 3,
-              child: RaisedButton(
-                color: Colors.redAccent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                onPressed: null,
-                child: Text(
-                  'Download',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
+    var _customer = SyncCard(
+      title: 'Sync Customer',
+      iconName: 'assets/icons/pelanggan.png',
+      status: 'Complete',
+      pressFunc: null,
+      isLoading: false,
     );
     var _dividerMarket = Container(
       margin: EdgeInsets.all(5),
@@ -124,229 +76,33 @@ class _SyncScreenState extends SyncScreenModel {
         style: TextStyle(color: Colors.black45, fontSize: 18),
       ),
     );
-    var _survey = Card(
-      margin: EdgeInsets.fromLTRB(1, 5, 1, 5),
-      color: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      child: Container(
-        width: double.infinity,
-        margin: EdgeInsets.all(5),
-        padding: EdgeInsets.all(10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 2,
-              child: Image.asset(
-                'assets/icons/document.png',
-                width: size.width / 6,
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.tight,
-              flex: 6,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Sync Survey',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Status: Complete',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 10),
-                  )
-                ],
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 3,
-              child: RaisedButton(
-                color: Colors.redAccent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                onPressed: null,
-                child: Text(
-                  'Download',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
+    var _survey = SyncCard(
+      iconName: 'assets/icons/document.png',
+      title: 'Sync Survey',
+      status: 'Complete',
+      pressFunc: null,
+      isLoading: false,
     );
-    var _surveyImage = Card(
-      margin: EdgeInsets.fromLTRB(1, 5, 1, 5),
-      color: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      child: Container(
-        width: double.infinity,
-        margin: EdgeInsets.all(5),
-        padding: EdgeInsets.all(10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 2,
-              child: Image.asset(
-                'assets/icons/photo.png',
-                width: size.width / 6,
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.tight,
-              flex: 6,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Sync Image',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Status: Complete',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 10),
-                  )
-                ],
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 3,
-              child: RaisedButton(
-                color: Colors.redAccent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                onPressed: null,
-                child: Text(
-                  'Download',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
+    var _surveyImage = SyncCard(
+      iconName: 'assets/icons/photo.png',
+      title: 'Sync Image',
+      pressFunc: null,
+      status: 'Complete',
+      isLoading: false,
     );
-    var _sales = Card(
-      margin: EdgeInsets.fromLTRB(1, 5, 1, 5),
-      color: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      child: Container(
-        width: double.infinity,
-        margin: EdgeInsets.all(5),
-        padding: EdgeInsets.all(10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 2,
-              child: Image.asset(
-                'assets/icons/document.png',
-                width: size.width / 6,
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.tight,
-              flex: 6,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Sync Assessment Sales',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Status: In-Complete',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 10),
-                  )
-                ],
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 3,
-              child: RaisedButton(
-                color: Colors.redAccent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                onPressed: () {},
-                child: Text(
-                  'Download',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
+    var _sales = SyncCard(
+      iconName: 'assets/icons/document.png',
+      isLoading: false,
+      pressFunc: () {},
+      status: 'In-Complete',
+      title: 'Sync Assessment Sales',
     );
-    var _salesImage = Card(
-      margin: EdgeInsets.fromLTRB(1, 5, 1, 5),
-      color: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      child: Container(
-        width: double.infinity,
-        margin: EdgeInsets.all(5),
-        padding: EdgeInsets.all(10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 2,
-              child: Image.asset(
-                'assets/icons/photo.png',
-                width: size.width / 6,
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.tight,
-              flex: 6,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Sync Image',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Status: In-Complete',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 10),
-                  )
-                ],
-              ),
-            ),
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 3,
-              child: RaisedButton(
-                color: Colors.redAccent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                onPressed: () {},
-                child: Text(
-                  'Download',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
+    var _salesImage = SyncCard(
+      iconName: 'assets/icons/photo.png',
+      title: 'Sync Image',
+      isLoading: false,
+      pressFunc: () {},
+      status: 'In-Complete',
     );
     return Container(
         color: Colors.grey[200],

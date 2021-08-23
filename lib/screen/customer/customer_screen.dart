@@ -218,14 +218,8 @@ class _CustomerScreenState extends CustomerScreenModel {
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(20)),
-                                          onPressed: () {
-                                            showDialog(
-                                                context: context,
-                                                builder:
-                                                    (BuildContext context) {
-                                                  return _kunjunganDialog;
-                                                });
-                                          },
+                                          onPressed: () => pressKunjungan(
+                                              context, snapshot.data[index]),
                                           child: Text(
                                             'Kunjungan',
                                             style:
